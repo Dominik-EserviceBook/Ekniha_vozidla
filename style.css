@@ -21,3 +21,21 @@ h1 { margin: 8px 0 0; }
 .timeline { list-style: none; padding: 0; margin: 0; }
 .timeline li { padding: 10px 0; border-bottom: 1px solid #eee; }
 .timeline .date { font-weight: 700; }
+.heroRow { display: grid; grid-template-columns: 140px 1fr; gap: 14px; align-items: center; }
+@media (max-width: 720px) { .heroRow { grid-template-columns: 1fr; } }
+
+.heroImg {
+  width: 100%; height: 140px; object-fit: cover;
+  border-radius: 12px; background: #eee;
+}
+
+.heroTitle { font-size: 22px; font-weight: 800; }
+.heroBtns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+
+.btn {
+  display: inline-block; padding: 10px 12px; border-radius: 12px;
+  text-decoration: none; font-weight: 700;
+  border: 1px solid #111; color: #fff; background: #111;
+}
+.btnGhost { background: transparent; color: #111; }
+.btn:active { transform: translateY(1px); }
