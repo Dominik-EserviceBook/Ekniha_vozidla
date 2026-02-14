@@ -9,48 +9,79 @@
 <body>
   <header class="wrap">
     <h1>E-kniha vozidla</h1>
-    <p class="muted">Verejná digitálna servisná kniha (bez prihlasovania).</p>
+    <p class="muted">Verejná digitálna servisná kniha dostupná cez QR kód.</p>
   </header>
 
   <main class="wrap">
-  <section class="card hero">
-  <div class="heroRow">
-    <img id="carPhoto" class="heroImg" src="" alt="Foto vozidla">
-    <div class="heroInfo">
-      <div id="carTitle" class="heroTitle">–</div>
-      <div id="carSubtitle" class="muted">–</div>
+
+    <!-- HERO / ÚVODNÁ KARTA -->
+    <section class="card hero">
+      <div class="heroRow">
+        <img id="carPhoto" class="heroImg" src="" alt="Foto vozidla">
+        <div class="heroInfo">
+          <div id="carTitle" class="heroTitle">–</div>
+          <div id="carSubtitle" class="muted">–</div>
+          <div id="carVin" class="muted small"></div>
+
+          <div class="heroBtns">
+            <a id="btnCall" class="btn" href="#">Zavolať</a>
+            <a id="btnSms" class="btn btnGhost" href="#">SMS</a>
+            <a id="btnMail" class="btn btnGhost" href="#">E-mail</a>
+          </div>
+
+          <div id="carNote" class="muted small" style="margin-top:10px"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AKCIE (FORM + HISTÓRIA) -->
+    <section class="card">
+      <h2>Servisná história</h2>
+      <p class="muted small">Záznamy sa pridávajú cez formulár. História je verejne čitateľná.</p>
 
       <div class="heroBtns">
-        <a id="btnCall" class="btn" href="#">Zavolať</a>
-        <a id="btnSms" class="btn btnGhost" href="#">SMS</a>
-        <a id="btnMail" class="btn btnGhost" href="#">E-mail</a>
+        <a id="btnAddJob" class="btn" href="#" target="_blank" rel="noopener">Pridať servisnú zákazku</a>
+        <a id="btnHistory" class="btn btnGhost" href="#" target="_blank" rel="noopener">História servisov (tabuľka)</a>
       </div>
+      <div class="spacer"></div>
 
-      <div id="carNote" class="muted small"></div>
-    </div>
-  </div>
-</section>
+<div class="embedWrap">
+  <iframe
+    title="História servisov"
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRT0Z2qzGMddrixkpReckQzFhGAyeKmY2yLNtQNNZ0gX3A_gPZSEMRSC3EaoZR7a6teIKiq-4EPJBzz/pubhtml?widget=true&amp;headers=false"
+    loading="lazy"
+  ></iframe>
+</div>
+    </section>
+
+    <!-- HEALTH STATUS -->
     <section class="card">
-      <h2>Status vozidla</h2>
+      <h2>Health status</h2>
       <div class="grid">
         <div class="pill">
-          <div class="label">STK</div>
+          <div class="label">STK / EK</div>
           <div id="stkLeft" class="value">–</div>
           <div id="stkDate" class="muted small">–</div>
         </div>
+
         <div class="pill">
-          <div class="label">Výmena oleja (podľa dátumu)</div>
+          <div class="label">Výmena oleja</div>
           <div id="oilLeft" class="value">–</div>
           <div id="oilDate" class="muted small">–</div>
         </div>
       </div>
-      <p class="muted small"></p>
+      <p class="muted small">Pozn.: bez km – iba časové udalosti.</p>
     </section>
 
+    <!-- HISTÓRIA VOZIDLA -->
     <section class="card">
       <h2>História vozidla</h2>
       <ul id="timeline" class="timeline"></ul>
+      <p class="muted small" style="margin-top:10px">
+        Detailné záznamy sú v tabuľke “História servisov”.
+      </p>
     </section>
+
   </main>
 
   <script src="app.js"></script>
