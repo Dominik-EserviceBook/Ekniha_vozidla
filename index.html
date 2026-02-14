@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>E-kniha vozidla</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="wrap">
+    <h1>E-kniha vozidla</h1>
+    <p class="muted">Verejná digitálna servisná kniha (bez prihlasovania).</p>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h2>Health status</h2>
+      <div class="grid">
+        <div class="pill">
+          <div class="label">STK</div>
+          <div id="stkLeft" class="value">–</div>
+          <div id="stkDate" class="muted small">–</div>
+        </div>
+        <div class="pill">
+          <div class="label">Výmena oleja (podľa dátumu)</div>
+          <div id="oilLeft" class="value">–</div>
+          <div id="oilDate" class="muted small">–</div>
+        </div>
+      </div>
+      <p class="muted small">Pozn.: bez km – iba časové udalosti.</p>
+    </section>
+
+    <section class="card">
+      <h2>História vozidla</h2>
+      <ul id="timeline" class="timeline"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
