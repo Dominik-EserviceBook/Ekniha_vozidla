@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>E-kniha vozidla</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -36,6 +36,7 @@
             <div class="label">Majiteľ</div>
             <div class="value">Dominik Timanik</div>
           </div>
+
           <div class="info">
             <div class="label">Kontakt</div>
             <div class="value">
@@ -46,8 +47,12 @@
 
           <div class="info">
             <div class="label">STK/EK do</div>
-            <div class="value"><strong id="stkEkDate">2028-02-06</strong> <span class="muted" id="stkEkLeft"></span></div>
+            <div class="value">
+              <strong id="stkEkDate">2028-02-06</strong>
+              <span class="muted" id="stkEkLeft"></span>
+            </div>
           </div>
+
           <div class="info">
             <div class="label">Olej – posledná výmena</div>
             <div class="value">
@@ -77,14 +82,17 @@
           <div class="status__name">STK/EK</div>
           <div class="status__value" id="statusStkEkText">—</div>
         </div>
+
         <div class="status" id="statusOil">
           <div class="status__name">Olej</div>
           <div class="status__value" id="statusOilText">—</div>
         </div>
+
         <div class="status" id="statusPzp">
           <div class="status__name">PZP</div>
           <div class="status__value">Doplň dátum v app.js</div>
         </div>
+
         <div class="status" id="statusVignette">
           <div class="status__name">Diaľničná známka</div>
           <div class="status__value">Doplň dátum v app.js</div>
@@ -92,7 +100,7 @@
       </div>
 
       <p class="hint muted">
-        Pozn.: stránka nerieši kilometre, len <strong>časové termíny</strong> (ako sme chceli).
+        Pozn.: stránka nerieši kilometre, len <strong>časové termíny</strong>.
       </p>
     </section>
 
@@ -102,7 +110,7 @@
         <div class="tile__icon">🕒</div>
         <div class="tile__body">
           <div class="tile__title">História vozidla</div>
-          <div class="tile__desc">Chronologická os: servis, STK, prezutie, nehody…</div>
+          <div class="tile__desc">Chronologická os: servis, STK, prezutie…</div>
         </div>
       </a>
 
@@ -110,7 +118,7 @@
         <div class="tile__icon">⛽</div>
         <div class="tile__body">
           <div class="tile__title">História tankovania</div>
-          <div class="tile__desc">Dátum, litre, cena, (neskôr aj spotreba a graf)</div>
+          <div class="tile__desc">Dátum, litre, cena (neskôr graf)</div>
         </div>
       </a>
 
@@ -118,7 +126,7 @@
         <div class="tile__icon">🧾</div>
         <div class="tile__body">
           <div class="tile__title">Servisná zákazka</div>
-          <div class="tile__desc">Preddefinované úkony + fotky + dokumenty</div>
+          <div class="tile__desc">Úkony + fotky + dokumenty</div>
         </div>
       </a>
 
@@ -126,7 +134,7 @@
         <div class="tile__icon">📝</div>
         <div class="tile__body">
           <div class="tile__title">Majiteľský záznam</div>
-          <div class="tile__desc">Úkony majiteľa (napr. prezutie, doplnenie kvapalín…)</div>
+          <div class="tile__desc">Úkony majiteľa (napr. prezutie…)</div>
         </div>
       </a>
     </section>
@@ -140,21 +148,21 @@
 
       <div class="embed">
         <iframe
-          src="<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRT0Z2qzGMddrixkpReckQzFhGAyeKmY2yLNtQNNZ0gX3A_gPZSEMRSC3EaoZR7a6teIKiq-4EPJBzz/pubhtml?widget=true&amp;headers=false"
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRKdPQREEvln1ghhqyTFv2elD3aBUvP5MXpx0y-FrV5wWFwBXBoE5SduuRcut4MZjST0E_VGkyWOsKe/pubhtml?widget=true&amp;headers=false&amp;cb=1"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
     </section>
 
-    <!-- TANKOVANIE -->
+    <!-- TANKOVANIE (zatiaľ placeholder) -->
     <section id="tankovanie" class="card">
       <div class="card__head">
         <h3>História tankovania</h3>
-        <p class="muted">Zatiaľ riešime ako tabuľku; neskôr doplníme výpočet spotreby a graf</p>
+        <p class="muted">Keď budeš mať Form + Sheet, vložíme sem iframe rovnako ako História.</p>
       </div>
       <div class="placeholder">
-        <p class="muted">Sem dáme buď druhý Google Sheet embed alebo samostatnú sekciu.</p>
+        <p class="muted">Zatiaľ tu nič nie je.</p>
       </div>
     </section>
 
@@ -162,27 +170,22 @@
     <section id="zakazka" class="card">
       <div class="card__head">
         <h3>Servisná zákazka</h3>
-        <p class="muted">Odosiela sa cez Google Form (preddefinované úkony + prílohy)</p>
+        <p class="muted">Odosiela sa cez Google Form</p>
       </div>
 
       <div class="actions">
         <a class="btn" target="_blank" rel="noopener" href="https://forms.gle/KJfYVYUWmWGfRTwj8">Otvoriť formulár servisného záznamu</a>
       </div>
-
-      <ul class="list">
-        <li>Checkboxy: olej, filtre, brzdy, geometria, diagnostika, klimatizácia, …</li>
-        <li>Poznámka + možnosť priložiť fotky / faktúry</li>
-      </ul>
     </section>
 
     <!-- MAJITEĽSKÝ ZÁZNAM -->
     <section id="majitel" class="card">
       <div class="card__head">
         <h3>Majiteľský záznam</h3>
-        <p class="muted">Tu môže byť druhý formulár (pre majiteľa) alebo jednoduché poznámky</p>
+        <p class="muted">Ak chceš, spravíme druhý Form len pre majiteľa.</p>
       </div>
       <div class="placeholder">
-        <p class="muted">Keď budeš chcieť, spravíme druhý Google Form špeciálne pre majiteľa.</p>
+        <p class="muted">Zatiaľ tu nič nie je.</p>
       </div>
     </section>
 
